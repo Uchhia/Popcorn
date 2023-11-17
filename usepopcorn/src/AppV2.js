@@ -469,6 +469,7 @@ function TrendingMoviesSlideshow() {
           src={`https://image.tmdb.org/t/p/w500${trendingMovies[currentIndex].poster_path}`}
           alt={`Trending Movie ${currentIndex + 1}`}
           style={{ height: "60.5rem", width: "58rem" }}
+          className="image"
         ></img>
       )}
     </div>

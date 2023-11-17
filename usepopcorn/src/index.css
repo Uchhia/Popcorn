@@ -395,6 +395,20 @@ body {
   opacity: 0.4;
   z-index: 1;
 }
+.image {
+  opacity: 1;
+  animation: fade 5s linear infinite;
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
