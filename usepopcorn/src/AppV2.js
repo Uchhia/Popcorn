@@ -364,13 +364,15 @@ function WatchMovieList({ watched, handleWatchedDelete }) {
   //console.log(watched);
   return (
     <ul className="list">
-      {watched.map((movie) => (
-        <WatchMovie
-          movie={movie}
-          key={movie.imdbID}
-          handleWatchedDelete={handleWatchedDelete}
-        />
-      ))}
+      {watched
+        ? watched.map((movie) => (
+            <WatchMovie
+              movie={movie}
+              key={movie.imdbID}
+              handleWatchedDelete={handleWatchedDelete}
+            />
+          ))
+        : []}
     </ul>
   );
 }
@@ -420,7 +422,7 @@ function Summary({ watched }) {
       <div>
         <p>
           <span>#️⃣</span>
-          <span>{watched.length} movies</span>
+          <span>{watched ? watched.length : 0} movies</span>
         </p>
         <p>
           <span>⭐️</span>
